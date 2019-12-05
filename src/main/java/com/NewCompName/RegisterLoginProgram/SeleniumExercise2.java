@@ -44,7 +44,7 @@ private static void getTitle1(String Title,WebDriver D )
 	driver.manage().window().maximize();
 	
 	//Entering vehicle data
-	   
+	   String S= "newkj";
 	
 	driver.findElement(By.xpath("//select[@name='Make']//option[text()='BMW']")).click();
 	driver.findElement(By.xpath("//select[@name='Model']//option[text()='Scooter']")).click();

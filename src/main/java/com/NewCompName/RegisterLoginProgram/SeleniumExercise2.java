@@ -38,8 +38,7 @@ private static void getTitle1(String Title,WebDriver D )
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		
-String S = "Test";
-	//Navigating to the website		
+ 	//Navigating to the website		
 	driver.get("http://demo.automationtalks.com/index.html");
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.manage().window().maximize();

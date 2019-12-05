@@ -52,13 +52,8 @@ public class WebsiteLogin {
 	
 	
 	
-	List<WebElement> ddmm=selectdobm.getOptions();
-	for(int i=0;i<ddmm.size();i++)
-{
-		if (i==7) { ddmm.get(i).click();}
-
-		System.out.println("Print the values"+ddmm.get(i).getText());
-}
+	//List<WebElement> ddmm=selectdobm.getOptions();
+	
 	
 	String str = "August";
 	

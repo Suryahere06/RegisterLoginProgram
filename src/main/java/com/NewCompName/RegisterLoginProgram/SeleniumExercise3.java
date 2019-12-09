@@ -153,7 +153,7 @@ public class SeleniumExercise3 {
 	driver.findElement(By.xpath("//li[@class='dropdown user']//a[@href='#']")).click(); 
 	driver.findElement(By.linkText("Logoff")).click();
 	
-   // driver.close();
+    driver.close();
     
     
   

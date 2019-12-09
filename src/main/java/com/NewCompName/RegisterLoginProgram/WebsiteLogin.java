@@ -74,7 +74,7 @@ public class WebsiteLogin {
 	driver.findElement(By.id("Newsletter")).click();
 	
 	
-	Thread.sleep(3000);
+	 
 	driver.findElement(By.xpath("//button[@class='btn btn-primary btn-lg']")).click();
 	
 	

@@ -55,8 +55,29 @@ public class SeleniumExercise3 {
 		
 	}
 	//Verify that all options are present on dashboard page
+	WebElement Dashboard = driver.findElement(By.linkText("Dashboard"));
+	WebElement Projects= driver.findElement(By.linkText("Projects"));
+	WebElement Tasks= driver.findElement(By.linkText("Tasks"));
+	WebElement Tickets= driver.findElement(By.linkText("Tickets"));
+	WebElement Discussions= driver.findElement(By.linkText("Discussions"));
+	WebElement Reports= driver.findElement(By.linkText("Reports"));
+	WebElement Users= driver.findElement(By.linkText("Users"));
+	WebElement Configuration= driver.findElement(By.linkText("Configuration"));
+	WebElement Tools= driver.findElement(By.linkText("Tools"));
+	WebElement qdPM= driver.findElement(By.linkText("qdPM Extended"));
 	
+	if(Dashboard.isDisplayed() && Projects.isDisplayed() && Tasks.isDisplayed() && Tickets.isDisplayed() && 
+			Discussions.isDisplayed() && Reports.isDisplayed() && Users.isDisplayed() && 
+			Configuration.isDisplayed() && Tools.isDisplayed() && qdPM.isDisplayed())
+	{
+	System.out.println("The items are present in dashboard");
+	}else {
+		System.out.println("Items are not present");
+	}
 	
+	//Verify that all options are present on dashboard page using assertion
+	
+
 	//Click on “Add Task” button 
 	driver.findElement(By.xpath("//button[text()='Add Task']")).click();
 	Select ste= new Select(driver.findElement(By.id("form_projects_id")));
@@ -94,8 +115,7 @@ public class SeleniumExercise3 {
     robot.keyPress(KeyEvent.VK_META);
 	robot.keyPress(KeyEvent.VK_TAB);
 	robot.keyRelease(KeyEvent.VK_META);
-	robot.keyRelease(KeyEvent.VK_TAB);
-	 
+	robot.keyRelease(KeyEvent.VK_TAB); 
 	robot.delay(500);
 	//Open Goto window
 	robot.keyPress(KeyEvent.VK_META);

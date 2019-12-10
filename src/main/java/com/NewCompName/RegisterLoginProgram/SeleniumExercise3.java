@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.time.DateUtils;
+import org.apache.http.util.Asserts;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -26,6 +27,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class SeleniumExercise3 {
 
@@ -66,17 +69,29 @@ public class SeleniumExercise3 {
 	WebElement Tools= driver.findElement(By.linkText("Tools"));
 	WebElement qdPM= driver.findElement(By.linkText("qdPM Extended"));
 	
-	if(Dashboard.isDisplayed() && Projects.isDisplayed() && Tasks.isDisplayed() && Tickets.isDisplayed() && 
+	/*if(Dashboard.isDisplayed() && Projects.isDisplayed() && Tasks.isDisplayed() && Tickets.isDisplayed() && 
 			Discussions.isDisplayed() && Reports.isDisplayed() && Users.isDisplayed() && 
 			Configuration.isDisplayed() && Tools.isDisplayed() && qdPM.isDisplayed())
 	{
 	System.out.println("The items are present in dashboard");
 	}else {
 		System.out.println("Items are not present");
-	}
+	}*/
 	
 	//Verify that all options are present on dashboard page using assertion
+	Assert.assertEquals(Dashboard.isDisplayed(), true);
+	Assert.assertEquals(Projects.isDisplayed(), true);
+	Assert.assertEquals(Tasks.isDisplayed(), true);
+	Assert.assertEquals(Tickets.isDisplayed(), true);
+	Assert.assertEquals(Discussions.isDisplayed(), true);
+	Assert.assertEquals(Reports.isDisplayed() , true);
+	Assert.assertEquals(Users.isDisplayed(), true);
+	Assert.assertEquals(Configuration.isDisplayed(), true);
+	Assert.assertEquals(Tools.isDisplayed(), true);
+	Assert.assertEquals(qdPM.isDisplayed(), true);
+
 	
+    
 
 	//Click on “Add Task” button 
 	driver.findElement(By.xpath("//button[text()='Add Task']")).click();
